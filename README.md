@@ -72,11 +72,12 @@ http:///158.160.142.119
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
 Используем Playbook [zabbix-main.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/zabbix-main.yaml) [zabbix-agent.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/zabbix-agent.yaml)
 
-zabbix server http://158.160.28.249:8080/
+zabbix server http://158.160.25.42:8080/
 
 Логин: Admin Пасс: zabbix
 
-![image](https://github.com/ramazanbb/diplom/assets/59530807/40e081c4-0a39-4f16-a4af-1597d287f245)
+![image](https://github.com/ramazanbb/diplom/assets/59530807/e56e7569-bc64-4ef8-884d-1c2092311f49)
+
 
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
