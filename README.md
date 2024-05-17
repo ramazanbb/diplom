@@ -58,6 +58,9 @@
 
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
+
+http://158.160.171.82/
+
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/d7217cdb-8661-4766-a225-0b585dfbd65f)
 
 ### Мониторинг
