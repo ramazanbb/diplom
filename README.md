@@ -80,6 +80,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 Используем Playbook [filebeat.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/filebeat.yaml) [kibana.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/kibana.yaml) [elk.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/elk.yaml)
 
+http://158.160.90.20:5601/app/kibana#/discover?_g=(filters:!())&_a=(columns:!(_source),index:a1a2a480-1473-11ef-9e50-27b58c19a7db,interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))
+
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/ad9cd7d4-814c-4ae1-ada2-e06963a1ddf5)
 
 Создайте ВМ, разверните на ней Kibana, сконфигурируйте соединение с Elasticsearch.
