@@ -62,24 +62,29 @@
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
 Используем Playbook zabbix-agent.yaml zabbix-main.yaml
 zabbix server http://158.160.76.231:8080/
-![image](https://github.com/ramazanbb/diplom/assets/59530807/f848dcb0-e5c7-4a9a-8ae7-4cc00f72790a)
+Логин: Admin Пасс: zabbix
+![image](https://github.com/ramazanbb/diplom/assets/59530807/db8fd0f0-e464-45c0-b02d-a53b23b8fef9)
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
+Используем Playbook filebeat.yaml kibana.yaml elk.yaml
 
 Создайте ВМ, разверните на ней Kibana, сконфигурируйте соединение с Elasticsearch.
 
 ### Сеть
 Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/1398a21d-8976-4edc-8772-3b25d0500e7b)
 
 Настройте [Security Groups](https://cloud.yandex.com/docs/vpc/concepts/security-groups) соответствующих сервисов на входящий трафик только к нужным портам.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/bde1ae9c-a19c-40a8-8f79-965843b43ce4)
 
 Настройте ВМ с публичным адресом, в которой будет открыт только один порт — ssh.  Эта вм будет реализовывать концепцию  [bastion host]( https://cloud.yandex.ru/docs/tutorials/routing/bastion) . Синоним "bastion host" - "Jump host". Подключение  ansible к серверам web и Elasticsearch через данный bastion host можно сделать с помощью  [ProxyCommand](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html#network-delegate-to-vs-proxycommand) . Допускается установка и запуск ansible непосредственно на bastion host.(Этот вариант легче в настройке)
 
 ### Резервное копирование
 Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/bd254348-d8d7-4afa-a9fd-c6c3cc8bb191)
 
 ### Дополнительно
 Не входит в минимальные требования. 
