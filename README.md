@@ -71,7 +71,8 @@ zabbix server http://158.160.28.249:8080/
 
 Логин: Admin Пасс: zabbix
 
-![image](https://github.com/ramazanbb/diplom/assets/59530807/db8fd0f0-e464-45c0-b02d-a53b23b8fef9)
+![image](https://github.com/ramazanbb/diplom/assets/59530807/40e081c4-0a39-4f16-a4af-1597d287f245)
+
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
 
