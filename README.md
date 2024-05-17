@@ -51,7 +51,9 @@
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/f021fe77-52ac-4c21-89ac-27d4af515a82)
 
 
-Используем Playbook nginx1.yaml
+Используем Playbook 
+[nginx1.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/nginx1.yaml)
+
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/8963a451-2de3-4931-bcce-0a3da41d98fe)
 
 Протестируйте сайт
