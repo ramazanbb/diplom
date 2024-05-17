@@ -34,16 +34,21 @@
 
 ### Сайт
 Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/72ccba67-3f72-4235-b24c-474e29698cd3)
 
 Используйте набор статичных файлов для сайта. Можно переиспользовать сайт из домашнего задания.
 
 Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/bb804be5-8f5f-4b88-a838-197db0791e63)
 
 Создайте [Backend Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/backend-group), настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/f458cfa1-01fa-418a-9e1e-d44fa593354d)
 
 Создайте [HTTP router](https://cloud.yandex.com/docs/application-load-balancer/concepts/http-router). Путь укажите — /, backend group — созданную ранее.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/8e6abf03-45d1-40f3-b695-4d085e085d2f)
 
 Создайте [Application load balancer](https://cloud.yandex.com/en/docs/application-load-balancer/) для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
+![image](https://github.com/ramazanbb/diplom/assets/59530807/f021fe77-52ac-4c21-89ac-27d4af515a82)
 
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
