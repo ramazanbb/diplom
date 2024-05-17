@@ -60,6 +60,9 @@
 
 ### Мониторинг
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
+Используем Playbook zabbix-agent.yaml zabbix-main.yaml
+zabbix server http://158.160.76.231:8080/
+![image](https://github.com/ramazanbb/diplom/assets/59530807/f848dcb0-e5c7-4a9a-8ae7-4cc00f72790a)
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
 
