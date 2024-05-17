@@ -64,7 +64,7 @@
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
 
-http:///158.160.142.119:80
+http:///158.160.142.119
 
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/d0743fde-177c-4906-89d8-1bec201caf76)
 
