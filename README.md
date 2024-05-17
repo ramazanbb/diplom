@@ -74,7 +74,9 @@ zabbix server http://158.160.76.231:8080/
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
-Используем Playbook filebeat.yaml kibana.yaml elk.yaml
+
+Используем Playbook [filebeat.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/filebeat.yaml) [kibana.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/kibana.yaml) [elk.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/elk.yaml)
+
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/ad9cd7d4-814c-4ae1-ada2-e06963a1ddf5)
 
 Создайте ВМ, разверните на ней Kibana, сконфигурируйте соединение с Elasticsearch.
