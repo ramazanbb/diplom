@@ -60,7 +60,7 @@
 
 ### Мониторинг
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
-Используем Playbook zabbix-agent.yaml zabbix-main.yaml
+Используем Playbook [zabbix-main.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/zabbix-main.yaml) [zabbix-agent.yaml](https://github.com/ramazanbb/diplom/blob/main/ansible/zabbix-agent.yaml)
 zabbix server http://158.160.76.231:8080/
 Логин: Admin Пасс: zabbix
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/db8fd0f0-e464-45c0-b02d-a53b23b8fef9)
