@@ -40,16 +40,20 @@
 Используйте набор статичных файлов для сайта. Можно переиспользовать сайт из домашнего задания.
 
 Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
-![image](https://github.com/ramazanbb/diplom/assets/59530807/bb804be5-8f5f-4b88-a838-197db0791e63)
+![image](https://github.com/ramazanbb/diplom/assets/59530807/ac3235c9-aa74-4de1-bfbc-4add461ba87a)
+
 
 Создайте [Backend Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/backend-group), настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.
-![image](https://github.com/ramazanbb/diplom/assets/59530807/f458cfa1-01fa-418a-9e1e-d44fa593354d)
+![image](https://github.com/ramazanbb/diplom/assets/59530807/239be11f-049d-4a5c-a089-c91c1519bf00)
+
 
 Создайте [HTTP router](https://cloud.yandex.com/docs/application-load-balancer/concepts/http-router). Путь укажите — /, backend group — созданную ранее.
-![image](https://github.com/ramazanbb/diplom/assets/59530807/8e6abf03-45d1-40f3-b695-4d085e085d2f)
+![image](https://github.com/ramazanbb/diplom/assets/59530807/f8c3b5a7-2e87-4e2a-abb1-b2b8b7cbab71)
+
 
 Создайте [Application load balancer](https://cloud.yandex.com/en/docs/application-load-balancer/) для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
-![image](https://github.com/ramazanbb/diplom/assets/59530807/f021fe77-52ac-4c21-89ac-27d4af515a82)
+![image](https://github.com/ramazanbb/diplom/assets/59530807/3f7e96a2-f4fb-4814-8dac-8b7a4c6f153c)
+
 
 
 Используем Playbook 
