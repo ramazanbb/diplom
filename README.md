@@ -50,6 +50,10 @@
 Создайте [Application load balancer](https://cloud.yandex.com/en/docs/application-load-balancer/) для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/f021fe77-52ac-4c21-89ac-27d4af515a82)
 
+
+Используем Playbook nginx1.yaml
+![image](https://github.com/ramazanbb/diplom/assets/59530807/8963a451-2de3-4931-bcce-0a3da41d98fe)
+
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
 ![image](https://github.com/ramazanbb/diplom/assets/59530807/d7217cdb-8661-4766-a225-0b585dfbd65f)
