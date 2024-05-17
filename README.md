@@ -64,9 +64,9 @@
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
 
-http://158.160.171.82/
+http:///158.160.142.119:80
 
-![image](https://github.com/ramazanbb/diplom/assets/59530807/d7217cdb-8661-4766-a225-0b585dfbd65f)
+![image](https://github.com/ramazanbb/diplom/assets/59530807/d0743fde-177c-4906-89d8-1bec201caf76)
 
 ### Мониторинг
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
